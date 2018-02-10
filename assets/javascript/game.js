@@ -10,7 +10,7 @@ var computerGuess = options[Math.floor(Math.random()*options.length)];
 //I left this in after testing, in case someone feels like cheating. Kinda like an easter egg!
 console.log("Letter I'm thinking of: " + computerGuess)
 
-//This allows the player to input their guesses. onkeyup detects that a key has been pressed. String.fromCarCode(event.keyCode). toLowerCase converts the key press to string data, to match the options array and ensures all data is recieved as a lowercase letter, to match the options array. This basically just gives us usable data to correspond with our options variable. This also adds the letter guessed to the gusssedLetters arrary, so the player can see which letters they have already guessed. 
+//This allows the player to input their guesses. onkeyup detects that a key has been pressed (and released). String.fromCarCode(event.keyCode). toLowerCase converts the key press to string data, to match the options array and ensures all data is recieved as a lowercase letter, to match the options array. This basically just gives us usable data to correspond with our options variable. This also adds the letter guessed to the last position in the gusssedLetters arrary, so the player can see which letters they have already guessed. 
 document.onkeyup = function() {
     var playerGuess = String.fromCharCode(event.keyCode).
         toLowerCase()
